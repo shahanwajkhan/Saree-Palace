@@ -2,7 +2,7 @@
 
 Saree Palace is a premium, fully responsive, and highly interactive e-commerce boutique storefront designed for generational handloom masterpieces, fine tussar silks, and royal Mysore crepes. The application features a rich, editorial-style layout, modern stateful interactions, and a simulated Patron Loyalty program with phone OTP authentication.
 
-Live Demo: https://shahanwajkhan.github.io/Saree-Palace/
+Live Demo: https://saree-palace-eight.vercel.app/
 
 ---
 
