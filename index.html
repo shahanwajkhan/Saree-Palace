@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saree Palace | Luxury Handcrafted Sarees & Artisanal Silks</title>
+    <meta name="description" content="Discover Saree Palace's exquisite handpicked collection of traditional Banarasi, Tussar silk, Mysore crepe, and designer sarees. Crafted by master weavers." />
+    <link rel="stylesheet" href="index.css" />
+    <!-- FontAwesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Sticky Glassmorphic Navbar -->
+    <nav class="navbar" id="mainNavbar">
+      <a href="#" class="logo" id="logoLink">
+        <div class="logo-icon">S</div>
+        <span>Saree</span>
+        <p>Palace</p>
+      </a>
+
+      <div class="nav-links">
+        <a href="#hero" class="active">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#story">Our Craft</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faqs">FAQs</a>
+      </div>
+
+      <div class="nav-icons">
+        <button id="searchOpenBtn" aria-label="Search Catalog" title="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button id="wishlistOpenBtn" aria-label="Open Wishlist" title="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge" id="wishlistBadge">0</span>
+        </button>
+        <button id="cartOpenBtn" aria-label="Open Cart" title="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="badge" id="cartBadge">0</span>
+        </button>
+        <button id="profileOpenBtn" aria-label="Open Patron Portal" title="Patron Login">
+          <i class="fa-regular fa-user" id="profileIcon"></i>
+          <span class="profile-monogram" id="profileMonogram" style="display:none;"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+      <!-- Hero Banner -->
+      <section class="hero-section" id="hero">
+        <div class="hero-content">
+          <span class="hero-tag">Artisanal Heritage</span>
+          <h2>Draped in Elegance, <span>Crafted with Love</span></h2>
+          <p>
+            Explore our curated catalog of handloom masterpieces, fine tussar silk, and royal Mysore crepe sarees. Made by generational weavers dedicated to keeping the authentic craftsmanship alive.
+          </p>
+          <a href="#collection" class="btn-primary">
+            Explore Collection <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Category Quick Filter Chips -->
+      <div class="categories-bar" id="categoryChips">
+        <button class="category-chip active" data-category="all">All Sarees</button>
+        <button class="category-chip" data-category="Silk">Tussar Silk</button>
+        <button class="category-chip" data-category="Crepe">Mysore Crepe</button>
+        <button class="category-chip" data-category="Chiffon">Satin Chiffon</button>
+        <button class="category-chip" data-category="Designer">Designer Wear</button>
+      </div>
+
+      <!-- Main Collection Store -->
+      <div class="main-container" id="collection">
+        <!-- Section title -->
+        <div class="section-header">
+          <div class="section-title">
+            <span>Handpicked Collection</span>
+            <p>Trending Sarees</p>
+          </div>
+        </div>
+
+        <!-- Filter & Sorting Controls -->
+        <div class="filter-bar">
+          <div class="filter-group">
+            <label for="materialFilter">Fabric:</label>
+            <select id="materialFilter" class="filter-select">
+              <option value="all">All Fabrics</option>
+              <option value="Silk">Tussar & Soft Silk</option>
+              <option value="Crepe">Mysore Crepe</option>
+              <option value="Chiffon">Satin Chiffon</option>
+              <option value="Designer">Designer</option>
+            </select>
+
+            <label for="priceFilter" style="margin-left: 20px;">Price:</label>
+            <select id="priceFilter" class="filter-select">
+              <option value="all">All Budgets</option>
+              <option value="under10000">Under ₹10,000</option>
+              <option value="above10000">₹10,000 & Above</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sortOrder">Sort By:</label>
+            <select id="sortOrder" class="filter-select">
+              <option value="featured">Featured</option>
+              <option value="priceLow">Price: Low to High</option>
+              <option value="priceHigh">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="grid-container" id="productGrid">
+          <!-- Dynamic products injected here by script.js -->
+        </div>
+      </div>
+
+      <!-- Craftsmanship Editorial -->
+      <section class="craftsmanship-section" id="story">
+        <div class="editorial-grid">
+          <div class="editorial-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1200&auto=format&fit=crop"
+              alt="Traditional Handloom Weaver at Work"
+              class="editorial-image"
+            />
+          </div>
+          <div class="editorial-text-content">
+            <span class="editorial-subtitle">The Legacy of Handloom</span>
+            <h3 class="editorial-title">Preserving the Art of <span>Generational Weaving</span></h3>
+            <p class="editorial-desc">
+              Every saree in our collection tells a story of patience, skill, and heritage. We work directly with artisan co-operatives across Varanasi, Mysore, and Bengal, ensuring that every thread is hand-spun and weavers are compensated fairly. By choosing Saree Palace, you choose to support the timeless craft of handloom and keep this luxury culture alive.
+            </p>
+            <div class="feature-highlights">
+              <div class="highlight-box">
+                <div class="highlight-icon">
+                  <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div class="highlight-info">
+                  <h4>100% Pure Fabrics</h4>
+                  <p>Certified pure silk, organically dyed cotton, and premium threads.</p>
+                </div>
+              </div>
+              <div class="highlight-box">
+                <div class="highlight-icon">
+                  <i class="fa-solid fa-hands-holding-child"></i>
+                </div>
+                <div class="highlight-info">
+                  <h4>Fair Trade Practices</h4>
+                  <p>Direct margins paid straight to rural weaving communities.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Testimonials -->
+      <section class="testimonials-section" id="testimonials">
+        <div class="section-title" style="text-align: center;">
+          <span>What Our Patrons Say</span>
+          <p>Shared Stories of Elegance</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The Mysore Crepe saree is absolutely breathtaking. The drape is liquid gold, and the colors are even richer in person. The shipping was prompt, and the packaging smelled of natural sandalwood!"
+            </p>
+            <h4 class="reviewer-name">Aishwarya Sharma</h4>
+            <span class="reviewer-title">Mumbai, Patron</span>
+          </div>
+
+          <div class="testimonial-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "I wore the Grey Tussar Silk saree to my daughter's wedding reception and received endless compliments. You can feel the authenticity of the weave. It's a true heritage piece that I will pass down."
+            </p>
+            <h4 class="reviewer-name">Ragini Sen</h4>
+            <span class="reviewer-title">Kolkata, Collector</span>
+          </div>
+
+          <div class="testimonial-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="testimonial-text">
+              "Outstanding customer support. They helped me custom stitch the blouse piece virtually and it fits like a glove. The handwoven satin chiffons are incredibly light and modern."
+            </p>
+            <h4 class="reviewer-name">Meera Nair</h4>
+            <span class="reviewer-title">Delhi, Designer</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <section class="faq-section" id="faqs">
+        <div class="section-title" style="text-align: center;">
+          <span>Support & Inquiries</span>
+          <p>Frequently Asked Questions</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>Are your sarees authentic handlooms?</h4>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </div>
+            <div class="faq-body">
+              <div class="faq-content">
+                Yes, 100%. We are certified handloom partners. Each saree comes with an authenticity guarantee and descriptions of the weaver cooperative responsible for crafting it.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>Do you provide blouse tailoring custom stitching services?</h4>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </div>
+            <div class="faq-body">
+              <div class="faq-content">
+                Yes! Every saree includes an unstitched blouse piece. If you'd like custom measurement stitching, select the tailoring option on checkout, and our stylists will contact you via WhatsApp for measurements.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>What are your care instructions for silk sarees?</h4>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </div>
+            <div class="faq-body">
+              <div class="faq-content">
+                We highly recommend dry cleaning for all silk, crepe, and heavily embroidered sarees. Store them wrapped in pure cotton fabric or muslin sheets in a cool, dry closet. Avoid spraying perfume directly on silk fibers.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>What is your return policy?</h4>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </div>
+            <div class="faq-body">
+              <div class="faq-content">
+                Since these are handcrafted artisanal products, we offer an easy 7-day hassle-free return window for unworn items in original packaging, provided the blouse piece is un-cut.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Email Newsletter -->
+      <section class="newsletter-section">
+        <div class="newsletter-content">
+          <span class="newsletter-subtitle">Join the Royalty</span>
+          <h2 class="newsletter-title brand-font">Unlock Private Collections</h2>
+          <p class="newsletter-desc">
+            Subscribe to our newsletter to receive early-bird access to seasonal heritage drops, artisan stories, and exclusive styling masterclasses.
+          </p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email address" required aria-label="Email for Newsletter" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Detailed Editorial Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="brand-font">Saree Palace</h3>
+          <p>
+            Curating India's finest handwoven sarees and silks. Empowering traditional weavers since 1994.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#" class="social-link" aria-label="WhatsApp Support"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore Collections</h4>
+          <ul class="footer-links">
+            <li><a href="#collection">Tussar Silks</a></li>
+            <li><a href="#collection">Mysore Crepes</a></li>
+            <li><a href="#collection">Banarasi Katan</a></li>
+            <li><a href="#collection">Satin Chiffons</a></li>
+            <li><a href="#collection">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>The Brand</h4>
+          <ul class="footer-links">
+            <li><a href="#story">Artisanal Mission</a></li>
+            <li><a href="#story">Sustainability</a></li>
+            <li><a href="#">Press & Media</a></li>
+            <li><a href="#">Artisan Directory</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact & Help</h4>
+          <ul class="contact-info" style="list-style:none;">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>12, Palace Gardens Road, Richmond Town, Bangalore - 560025</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 80 4912 3000</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>concierge@sareepalace.in</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Saree Palace Private Limited. All Rights Reserved.</p>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-stripe"></i>
+          <i class="fa-solid fa-wallet"></i>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACTIVE UI LAYERS -->
+
+    <!-- Drawers Overlay -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- Cart Drawer -->
+    <div class="drawer" id="cartDrawer">
+      <div class="drawer-header">
+        <h3>Shopping Cart</h3>
+        <button class="drawer-close" id="cartCloseBtn" aria-label="Close Cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="drawer-content" id="cartDrawerContent">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+      <div class="drawer-footer" id="cartDrawerFooter">
+        <div class="cart-total-row">
+          <span class="cart-total-label">Subtotal</span>
+          <span class="cart-total-value" id="cartSubtotal">&#8377;0.00</span>
+        </div>
+        <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+      </div>
+    </div>
+
+    <!-- Wishlist Drawer -->
+    <div class="drawer" id="wishlistDrawer">
+      <div class="drawer-header">
+        <h3>My Wishlist</h3>
+        <button class="drawer-close" id="wishlistCloseBtn" aria-label="Close Wishlist">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="drawer-content" id="wishlistDrawerContent">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+
+    <!-- Patron Login / Profile Drawer -->
+    <div class="drawer" id="patronDrawer">
+      <div class="drawer-header">
+        <h3 id="patronDrawerTitle">Patron Portal</h3>
+        <button class="drawer-close" id="patronCloseBtn" aria-label="Close Patron Portal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="drawer-content" id="patronDrawerContent">
+        <!-- Rendered dynamically via script.js -->
+      </div>
+    </div>
+
+    <!-- Search Modal Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-overlay-header">
+        <button class="search-close-btn" id="searchCloseBtn" aria-label="Close Search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="search-input-wrapper">
+        <input type="text" id="searchInput" placeholder="Search sarees by fabric, color, name..." autocomplete="off" aria-label="Search catalog input" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="search-results-container">
+        <h4 class="search-results-title" id="searchResultsTitle">Top Suggestions</h4>
+        <div class="search-results-grid" id="searchResultsGrid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="quickViewModal">
+      <div class="modal-container">
+        <button class="modal-close-btn" id="quickViewCloseBtn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-image-side">
+          <img id="modalProductImage" src="" alt="Product Closeup" />
+        </div>
+        <div class="modal-info-side">
+          <span class="modal-product-category" id="modalProductCategory">Fabric Category</span>
+          <h2 class="modal-product-name" id="modalProductName">Saree Name</h2>
+          <div class="modal-product-price" id="modalProductPrice">&#8377;0.00</div>
+          <p class="modal-product-description" id="modalProductDesc">
+            Product details and description placeholder.
+          </p>
+          <div class="modal-product-details">
+            <div class="detail-row">
+              <span class="detail-label">Length:</span>
+              <span class="detail-value">5.5 Meters plus 0.8 Meters blouse piece</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Weave Type:</span>
+              <span class="detail-value" id="modalProductWeave">Handloom / Jacquard</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Care:</span>
+              <span class="detail-value">Dry Clean Only</span>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button class="modal-add-to-cart" id="modalAddToCartBtn">
+              <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+            <button class="modal-add-to-wishlist" id="modalAddToWishlistBtn" aria-label="Add to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notifications Area -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
