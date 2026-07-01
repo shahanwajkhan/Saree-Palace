@@ -45,6 +45,9 @@
           <i class="fa-regular fa-user" id="profileIcon"></i>
           <span class="profile-monogram" id="profileMonogram" style="display:none;"></span>
         </button>
+        <button id="mobileMenuOpenBtn" class="mobile-menu-toggle" aria-label="Open Navigation Menu" title="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </nav>
 
@@ -392,6 +395,27 @@
       </div>
       <div class="drawer-content" id="wishlistDrawerContent">
         <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="drawer" id="mobileNavDrawer">
+      <div class="drawer-header">
+        <div class="loyalty-card-logo" style="color: var(--primary-color);">
+          <span style="background: var(--primary-color); color: var(--accent-color); width: 24px; height: 24px; border-radius: 50% 50% 0 50%; font-size: 13px; display: flex; justify-content: center; align-items: center; font-weight: bold;">S</span> Palace
+        </div>
+        <button class="drawer-close" id="mobileNavCloseBtn" aria-label="Close Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="drawer-content">
+        <div class="mobile-menu-links">
+          <a href="#hero" class="mobile-nav-link active">Home</a>
+          <a href="#collection" class="mobile-nav-link">Collection</a>
+          <a href="#story" class="mobile-nav-link">Our Craft</a>
+          <a href="#testimonials" class="mobile-nav-link">Reviews</a>
+          <a href="#faqs" class="mobile-nav-link">FAQs</a>
+        </div>
       </div>
     </div>
 

@@ -200,6 +200,21 @@ function setupEventListeners() {
   profileOpenBtn.addEventListener("click", () => openDrawer(patronDrawer));
   patronCloseBtn.addEventListener("click", () => closeDrawer(patronDrawer));
 
+  // Mobile Nav Drawer triggers
+  const mobileMenuOpenBtn = document.getElementById("mobileMenuOpenBtn");
+  const mobileNavCloseBtn = document.getElementById("mobileNavCloseBtn");
+  const mobileNavDrawer = document.getElementById("mobileNavDrawer");
+  if (mobileMenuOpenBtn && mobileNavCloseBtn && mobileNavDrawer) {
+    mobileMenuOpenBtn.addEventListener("click", () => openDrawer(mobileNavDrawer));
+    mobileNavCloseBtn.addEventListener("click", () => closeDrawer(mobileNavDrawer));
+    
+    // Close mobile drawer on clicking any links
+    const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener("click", () => closeDrawer(mobileNavDrawer));
+    });
+  }
+
   // Close drawers via overlay
   drawerOverlay.addEventListener("click", closeAllDrawers);
 
@@ -481,6 +496,8 @@ function closeAllDrawers() {
   closeDrawer(cartDrawer);
   closeDrawer(wishlistDrawer);
   closeDrawer(patronDrawer);
+  const mobileNavDrawer = document.getElementById("mobileNavDrawer");
+  if (mobileNavDrawer) closeDrawer(mobileNavDrawer);
 }
 
 // Sticky header control
@@ -495,7 +512,7 @@ function updateHeaderScroll() {
 // Highlight active navbar link on scroll
 function updateActiveNavLink() {
   const sections = document.querySelectorAll("section, .main-container");
-  const navLinks = document.querySelectorAll(".nav-links a");
+  const navLinks = document.querySelectorAll(".nav-links a, .mobile-menu-links a");
   
   let currentActiveId = "hero"; // default fallback
 
